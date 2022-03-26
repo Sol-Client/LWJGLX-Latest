@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // lists every file in the library folder and adds it as dependency
+    def libraryFolder = new File("lib")
+    for (File file : libraryFolder.listFiles()) {
+        implementation files('lib/' + file.name)
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
