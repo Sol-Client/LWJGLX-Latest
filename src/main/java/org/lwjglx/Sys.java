@@ -2,6 +2,7 @@ package org.lwjglx;
 
 import static org.lwjgl.glfw.GLFW.glfwInit;
 
+import org.lwjgl.Version;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.glfw.GLFW;
 
@@ -14,7 +15,7 @@ import javax.swing.UIManager;
 public class Sys {
 	
 	static {
-		if ( glfwInit() != GL11.GL_TRUE )
+		if ( glfwInit() != true )
 			throw new IllegalStateException("Unable to initialize glfw");
 	}
 	
@@ -24,7 +25,7 @@ public class Sys {
 
 	/** Returns the LWJGL version. */
 	public static String getVersion() {
-		return org.lwjgl.Sys.getVersion();
+		return Version.getVersion();
 	}
 	
 	/**

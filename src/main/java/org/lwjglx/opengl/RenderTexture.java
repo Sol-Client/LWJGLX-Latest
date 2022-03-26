@@ -33,7 +33,7 @@ package org.lwjglx.opengl;
 
 import java.nio.IntBuffer;
 
-import org.lwjgl.BufferUtils;
+import org.lwjglx.BufferUtils;
 
 import static org.lwjgl.opengl.GL11.*;
 
