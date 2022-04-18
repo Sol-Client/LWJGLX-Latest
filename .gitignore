@@ -1,2 +1,7 @@
 # Project exclude paths
 /.gradle/
+.classpath
+.project
+.settings/
+build
+bin
